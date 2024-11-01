@@ -37,4 +37,3 @@ $ Y = a_{1}{\cdot}X_{1} + a_{2}{\cdot}X_{2} + {\cdots} + a_{n}{\cdot}X_{n} + b  
 
 
 
-
