@@ -25,6 +25,9 @@
 - DCL ... GRANT, REVOKEなど
 - DML ... SELECT, INSERTなど
 
+UNIONは重複が排除される、UNION ALLは重複が排除されない
+
 ## 正規表現
 
 正規表現
+
