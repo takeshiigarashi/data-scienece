@@ -1,0 +1,921 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>4.2 画像分類と一般物体認識 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/honkit-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter4_3.html" />
+    
+    
+    <link rel="prev" href="chapter4_1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter2_1.html">
+            
+                <a href="chapter2_1.html">
+            
+                    
+                    2.1 データリテラシーとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2_2.html">
+            
+                <a href="chapter2_2.html">
+            
+                    
+                    2.2 データの種類を知る
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter2_3.html">
+            
+                <a href="chapter2_3.html">
+            
+                    
+                    2.3 データの適正を判断する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter2_4.html">
+            
+                <a href="chapter2_4.html">
+            
+                    
+                    2.4 データの可視化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter2_5.html">
+            
+                <a href="chapter2_5.html">
+            
+                    
+                    2.4 データの可視化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter3_1.html">
+            
+                <a href="chapter3_1.html">
+            
+                    
+                    3.1 データサイエンスにまつわる基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter3_2.html">
+            
+                <a href="chapter3_2.html">
+            
+                    
+                    3.2 機械学習の各分野の特徴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter3_3.html">
+            
+                <a href="chapter3_3.html">
+            
+                    
+                    3.3 データ処理と特徴量エンジニアリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter3_4.html">
+            
+                <a href="chapter3_4.html">
+            
+                    
+                    3.4 機械学習を応用する上で重要な概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter3_5.html">
+            
+                <a href="chapter3_5.html">
+            
+                    
+                    3.5 アソシエーション分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter3_6.html">
+            
+                <a href="chapter3_6.html">
+            
+                    
+                    3.6 線形回帰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter3_7.html">
+            
+                <a href="chapter3_7.html">
+            
+                    
+                    3.7 ロジスティック回帰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter3_8.html">
+            
+                <a href="chapter3_8.html">
+            
+                    
+                    3.8 サポートベクトルマシン(SVM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter3_9.html">
+            
+                <a href="chapter3_9.html">
+            
+                    
+                    3.9 決定木
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="chapter3_10.html">
+            
+                <a href="chapter3_10.html">
+            
+                    
+                    3.10 K近傍法 (KNN: K Nearest Neighbor)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="chapter3_11.html">
+            
+                <a href="chapter3_11.html">
+            
+                    
+                    3.11 ナイーブベイズ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="chapter3_12.html">
+            
+                <a href="chapter3_12.html">
+            
+                    
+                    3.12 ニューラルネットワーク
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="chapter3_13.html">
+            
+                <a href="chapter3_13.html">
+            
+                    
+                    3.13 教師なし機械学習
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="chapter3_14.html">
+            
+                <a href="chapter3_14.html">
+            
+                    
+                    3.14 モデルの精度評価
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="chapter4_1.html">
+            
+                <a href="chapter4_1.html">
+            
+                    
+                    4.1 画像データ・動画データの性質と処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22" data-path="chapter4_2.html">
+            
+                <a href="chapter4_2.html">
+            
+                    
+                    4.2 画像分類と一般物体認識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="chapter4_3.html">
+            
+                <a href="chapter4_3.html">
+            
+                    
+                    4.3 音声処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="chapter4_4.html">
+            
+                <a href="chapter4_4.html">
+            
+                    
+                    4.4 時系列分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="chapter4_5.html">
+            
+                <a href="chapter4_5.html">
+            
+                    
+                    4.5 状態空間モデル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="chapter4_6.html">
+            
+                <a href="chapter4_6.html">
+            
+                    
+                    4.6 自然言語処理の基礎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="chapter4_7.html">
+            
+                <a href="chapter4_7.html">
+            
+                    
+                    4.7 大規模言語モデル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="chapter4_8.html">
+            
+                <a href="chapter4_8.html">
+            
+                    
+                    4.8 生成AI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="chapter4_9.html">
+            
+                <a href="chapter4_9.html">
+            
+                    
+                    4.9 機械学習における解釈性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="chapter5_1.html">
+            
+                <a href="chapter5_1.html">
+            
+                    
+                    5.1 データ収集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="chapter5_2.html">
+            
+                <a href="chapter5_2.html">
+            
+                    
+                    5.2 データ保管
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="chapter5_3.html">
+            
+                <a href="chapter5_3.html">
+            
+                    
+                    5.3 データ加工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="chapter5_4.html">
+            
+                <a href="chapter5_4.html">
+            
+                    
+                    5.4 データのセキュリティ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="chapter5_5.html">
+            
+                <a href="chapter5_5.html">
+            
+                    
+                    5.5 データ分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="chapter6_1.html">
+            
+                <a href="chapter6_1.html">
+            
+                    
+                    6.1 データ活用プロジェクトの進め方
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="chapter6_2.html">
+            
+                <a href="chapter6_2.html">
+            
+                    
+                    6.2 現状の把握
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="chapter6_3.html">
+            
+                <a href="chapter6_3.html">
+            
+                    
+                    6.3 課題の定義
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="chapter6_4.html">
+            
+                <a href="chapter6_4.html">
+            
+                    
+                    6.4 契約の種別と開発の形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="chapter7_1.html">
+            
+                <a href="chapter7_1.html">
+            
+                    
+                    7.1 法律・倫理をなぜ学ぶ？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="chapter7_2.html">
+            
+                <a href="chapter7_2.html">
+            
+                    
+                    7.2 データ倫理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="chapter7_3.html">
+            
+                <a href="chapter7_3.html">
+            
+                    
+                    7.3 データ倫理に関するガイドライン
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="chapter7_4.html">
+            
+                <a href="chapter7_4.html">
+            
+                    
+                    7.4 個人情報とプライバシー
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="chapter7_5.html">
+            
+                <a href="chapter7_5.html">
+            
+                    
+                    7.5 公平性・説明責任・透明性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="chapter7_6.html">
+            
+                <a href="chapter7_6.html">
+            
+                    
+                    7.6 生成モデルが社会に与えるインパクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="chapter7_7.html">
+            
+                <a href="chapter7_7.html">
+            
+                    
+                    7.7 言語モデルと生成AIに関する課題
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="chapter7_8.html">
+            
+                <a href="chapter7_8.html">
+            
+                    
+                    7.8 AIによる個人の意識の操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.2 画像分類と一般物体認識</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [['&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;msup&gt;&lt;mo separator="true"&gt;,&lt;/mo&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;&amp;#x27;, &amp;#x27;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:0.946332em;vertical-align:-0.19444em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.751892em;"&gt;&lt;span style="top:-3.063em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mpunct"&gt;&lt;span class="mpunct"&gt;,&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.751892em;"&gt;&lt;span style="top:-3.063em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;'] ],
+ displayMath: [ ['&lt;span class="katex-display"&gt;&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;msup&gt;&lt;mo separator="true"&gt;,&lt;/mo&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;&amp;#x27;,&amp;#x27;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:0.996332em;vertical-align:-0.19444em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.801892em;"&gt;&lt;span style="top:-3.113em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mpunct"&gt;&lt;span class="mpunct"&gt;,&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.801892em;"&gt;&lt;span style="top:-3.113em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;'], ["\\[","\\]"] ]
+ }
+ });
+</script>
+
+<h1 id="42-画像分類と一般物体認識">4.2 画像分類と一般物体認識</h1>
+<p>画像分類はニューラルネットワークが主流。ニューラルネットワークは<strong>特徴量を自動的に抽出できることから、非構造化データである画像の分析に向いている</strong>。</p>
+<p>活用例</p>
+<ul>
+<li><strong>顔認識</strong> </li>
+<li><strong>製造業の現場における品質管理</strong></li>
+<li><strong>スマート農業</strong></li>
+</ul>
+<h2 id="画像分類の技術の進歩">画像分類の技術の進歩</h2>
+<p>画像認識の最も強力な手法は<strong>畳み込みニューラルネットワーク (CNN: Convolutional Neural Network)</strong>。</p>
+<p>畳み込みニューラルネットワークでは、前段での抽出結果を下流へ入力するといういことを繰り返すことで、層が深くなるについてれ、高度な特徴を抽出できるという性質がある。</p>
+<p>CNNは、<strong>畳み込み層</strong>、<strong>プーリング層</strong>、<strong>全結合層</strong>の３種類のレイヤーから構成されている。</p>
+<ul>
+<li><strong>畳み込み層</strong> 画像から特徴を抽出する</li>
+<li><strong>プーリング層</strong> 重要な情報だけを残して情報圧縮する</li>
+<li><strong>全結合層</strong> 抽出された特徴に基づいて、画像分類の結果を確率を表す数値として出力する</li>
+</ul>
+<p>畳み込み層では、画像に対してカーネルと呼ばれる正方行列（3x3や5x5）がフィルタとして適用されることで、元の画像の特徴が強調された特徴マップが作成される。フィルタの処理は、元画像のピクセルとフィルタ行列の積和が計算される。エッジ検出用のカーネル、ぼかし用、シャープ化用など様々なカーネルがあるようだが、学習の仮定で複数のカーネルが訓練され、データに適した特徴を抽出するように自動で最適化される。</p>
+<p>プーリング層では、重要な特徴を残しつつ画像の情報量を圧縮する。<strong>最大プーリング</strong>では、画像の小領域毎に最大の画素値だけを残す。<strong>平均プーリング</strong>は、平均値を残す。</p>
+<h2 id="一般物体認識">一般物体認識</h2>
+<p>画像認識のなかでも画像分類は、１つの画像に対して被写体が◯◯というクラスに分類される確率を出力する。</p>
+<p>画像の中に複数の物体があるときに、物体の予測を行う技術を <strong>一般物体認識（Generic Object Recognition）</strong> という。</p>
+<p>一般物体認識は、 <strong>物体検出(Object Detection / Localization)</strong> と、 <strong>画像分類(Classification)</strong> の組み合わせとなる。</p>
+<p>物体認識の手法としては、以下の方法がある。</p>
+<ul>
+<li><strong>物体領域を矩形で切り出す手法</strong></li>
+<li><strong>物体領域を画素単位で精密に切り出す手法</strong> (セマンティックセグメンテーション)</li>
+<li><strong>両方を組み合わせた手法</strong> (インスタンスセグメンテーション)</li>
+</ul>
+<h2 id="画像処理のための計算リソース">画像処理のための計算リソース</h2>
+<p><strong>GPU(Graphics Processing Unit)</strong>: 大規模なテンソル（行列やベクトル）計算のような単純な処理を高速に行うことができ、並列演算処理が得意。GPUの演算能力を画像処理以外に汎用化されたGPGPUも開発された。</p>
+<p><strong>CUDA</strong>は、NVIDIAが提供しているGPGPUで並列演算を行う開発環境。他にGoogleは、テンソル計算に特化したTPUを開発している。</p>
+<h2 id="データ拡張、転移学習">データ拡張、転移学習</h2>
+<p>CNN（畳み込みニューラルネットワーク）では、パラメータが数千万個以上あり、言語処理用では数億個、数十億個を超える。</p>
+<p>学習データを用意するコストを減らすための工夫</p>
+<ul>
+<li><strong>データ拡張</strong>: データにランダムな変更（回転や平行移動など）を行うことで、人工的に訓練データのバリエーションを増やす</li>
+<li><strong>転移学習</strong>: 膨大なデータで訓練した学習済みモデルの汎用的なパラメータ値を別のタスクに応用する。</li>
+</ul>
+<p>転移学習における再訓練については以下のようなやり方がある</p>
+<ul>
+<li>(1) 新たに追加した「専用の層」のパラメータのみ訓練する</li>
+<li>(2) 出力層に近い側のパラメータのみ訓練し、上流のパラメータは固定する</li>
+<li>(3) 訓練済みモデルのすべてのパラメータを再訓練する</li>
+</ul>
+<p>(2)や(3)、特に(3)は<strong>ファインチューニング</strong>と呼ばれる。時間はかかるが高い精度を出す可能性がある。</p>
+<p>画像認識については、多くの学習済みモデルが公開されていて、転移学習に利用可能。（VGG16、ResNetなど）</p>
+<h2 id="モデルの軽量化">モデルの軽量化</h2>
+<ul>
+<li><strong>プルーニング</strong>: 枝刈り。比較的に汎化性能への寄与度の低い（ニューラルネットワークなどの）ノード間の接続を切る</li>
+<li><strong>蒸留</strong>: 大規模モデル（教師モデル）への入力とその出力を用いて、小さいモデル（生徒モデル）を学習する</li>
+<li><strong>量子化</strong>: パラメータをより小さいビット数で表現する</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter4_1.html" class="navigation navigation-prev " aria-label="Previous page: 4.1 画像データ・動画データの性質と処理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter4_3.html" class="navigation navigation-next " aria-label="Next page: 4.3 音声処理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.2 画像分類と一般物体認識","level":"1.22","depth":1,"next":{"title":"4.3 音声処理","level":"1.23","depth":1,"path":"doc/chapter4_3.md","ref":"./doc/chapter4_3.md","articles":[]},"previous":{"title":"4.1 画像データ・動画データの性質と処理","level":"1.21","depth":1,"path":"doc/chapter4_1.md","ref":"./doc/chapter4_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/chapter4_2.md","mtime":"2024-11-04T22:51:54.646Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T11:18:56.104Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

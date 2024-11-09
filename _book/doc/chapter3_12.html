@@ -1,0 +1,943 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>3.12 ニューラルネットワーク · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/honkit-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chapter3_13.html" />
+    
+    
+    <link rel="prev" href="chapter3_11.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter2_1.html">
+            
+                <a href="chapter2_1.html">
+            
+                    
+                    2.1 データリテラシーとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter2_2.html">
+            
+                <a href="chapter2_2.html">
+            
+                    
+                    2.2 データの種類を知る
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter2_3.html">
+            
+                <a href="chapter2_3.html">
+            
+                    
+                    2.3 データの適正を判断する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter2_4.html">
+            
+                <a href="chapter2_4.html">
+            
+                    
+                    2.4 データの可視化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter2_5.html">
+            
+                <a href="chapter2_5.html">
+            
+                    
+                    2.4 データの可視化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="chapter3_1.html">
+            
+                <a href="chapter3_1.html">
+            
+                    
+                    3.1 データサイエンスにまつわる基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="chapter3_2.html">
+            
+                <a href="chapter3_2.html">
+            
+                    
+                    3.2 機械学習の各分野の特徴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="chapter3_3.html">
+            
+                <a href="chapter3_3.html">
+            
+                    
+                    3.3 データ処理と特徴量エンジニアリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="chapter3_4.html">
+            
+                <a href="chapter3_4.html">
+            
+                    
+                    3.4 機械学習を応用する上で重要な概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="chapter3_5.html">
+            
+                <a href="chapter3_5.html">
+            
+                    
+                    3.5 アソシエーション分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="chapter3_6.html">
+            
+                <a href="chapter3_6.html">
+            
+                    
+                    3.6 線形回帰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="chapter3_7.html">
+            
+                <a href="chapter3_7.html">
+            
+                    
+                    3.7 ロジスティック回帰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="chapter3_8.html">
+            
+                <a href="chapter3_8.html">
+            
+                    
+                    3.8 サポートベクトルマシン(SVM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="chapter3_9.html">
+            
+                <a href="chapter3_9.html">
+            
+                    
+                    3.9 決定木
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="chapter3_10.html">
+            
+                <a href="chapter3_10.html">
+            
+                    
+                    3.10 K近傍法 (KNN: K Nearest Neighbor)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="chapter3_11.html">
+            
+                <a href="chapter3_11.html">
+            
+                    
+                    3.11 ナイーブベイズ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.18" data-path="chapter3_12.html">
+            
+                <a href="chapter3_12.html">
+            
+                    
+                    3.12 ニューラルネットワーク
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="chapter3_13.html">
+            
+                <a href="chapter3_13.html">
+            
+                    
+                    3.13 教師なし機械学習
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="chapter3_14.html">
+            
+                <a href="chapter3_14.html">
+            
+                    
+                    3.14 モデルの精度評価
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="chapter4_1.html">
+            
+                <a href="chapter4_1.html">
+            
+                    
+                    4.1 画像データ・動画データの性質と処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="chapter4_2.html">
+            
+                <a href="chapter4_2.html">
+            
+                    
+                    4.2 画像分類と一般物体認識
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="chapter4_3.html">
+            
+                <a href="chapter4_3.html">
+            
+                    
+                    4.3 音声処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="chapter4_4.html">
+            
+                <a href="chapter4_4.html">
+            
+                    
+                    4.4 時系列分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="chapter4_5.html">
+            
+                <a href="chapter4_5.html">
+            
+                    
+                    4.5 状態空間モデル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="chapter4_6.html">
+            
+                <a href="chapter4_6.html">
+            
+                    
+                    4.6 自然言語処理の基礎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="chapter4_7.html">
+            
+                <a href="chapter4_7.html">
+            
+                    
+                    4.7 大規模言語モデル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="chapter4_8.html">
+            
+                <a href="chapter4_8.html">
+            
+                    
+                    4.8 生成AI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="chapter4_9.html">
+            
+                <a href="chapter4_9.html">
+            
+                    
+                    4.9 機械学習における解釈性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="chapter5_1.html">
+            
+                <a href="chapter5_1.html">
+            
+                    
+                    5.1 データ収集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="chapter5_2.html">
+            
+                <a href="chapter5_2.html">
+            
+                    
+                    5.2 データ保管
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="chapter5_3.html">
+            
+                <a href="chapter5_3.html">
+            
+                    
+                    5.3 データ加工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="chapter5_4.html">
+            
+                <a href="chapter5_4.html">
+            
+                    
+                    5.4 データのセキュリティ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="chapter5_5.html">
+            
+                <a href="chapter5_5.html">
+            
+                    
+                    5.5 データ分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="chapter6_1.html">
+            
+                <a href="chapter6_1.html">
+            
+                    
+                    6.1 データ活用プロジェクトの進め方
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="chapter6_2.html">
+            
+                <a href="chapter6_2.html">
+            
+                    
+                    6.2 現状の把握
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="chapter6_3.html">
+            
+                <a href="chapter6_3.html">
+            
+                    
+                    6.3 課題の定義
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="chapter6_4.html">
+            
+                <a href="chapter6_4.html">
+            
+                    
+                    6.4 契約の種別と開発の形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="chapter7_1.html">
+            
+                <a href="chapter7_1.html">
+            
+                    
+                    7.1 法律・倫理をなぜ学ぶ？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="chapter7_2.html">
+            
+                <a href="chapter7_2.html">
+            
+                    
+                    7.2 データ倫理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="chapter7_3.html">
+            
+                <a href="chapter7_3.html">
+            
+                    
+                    7.3 データ倫理に関するガイドライン
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="chapter7_4.html">
+            
+                <a href="chapter7_4.html">
+            
+                    
+                    7.4 個人情報とプライバシー
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="chapter7_5.html">
+            
+                <a href="chapter7_5.html">
+            
+                    
+                    7.5 公平性・説明責任・透明性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="chapter7_6.html">
+            
+                <a href="chapter7_6.html">
+            
+                    
+                    7.6 生成モデルが社会に与えるインパクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="chapter7_7.html">
+            
+                <a href="chapter7_7.html">
+            
+                    
+                    7.7 言語モデルと生成AIに関する課題
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="chapter7_8.html">
+            
+                <a href="chapter7_8.html">
+            
+                    
+                    7.8 AIによる個人の意識の操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.12 ニューラルネットワーク</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [['&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;msup&gt;&lt;mo separator="true"&gt;,&lt;/mo&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;&amp;#x27;, &amp;#x27;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:0.946332em;vertical-align:-0.19444em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.751892em;"&gt;&lt;span style="top:-3.063em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mpunct"&gt;&lt;span class="mpunct"&gt;,&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.751892em;"&gt;&lt;span style="top:-3.063em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;'] ],
+ displayMath: [ ['&lt;span class="katex-display"&gt;&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;msup&gt;&lt;mo separator="true"&gt;,&lt;/mo&gt;&lt;mo mathvariant="normal" lspace="0em" rspace="0em"&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;&amp;#x27;,&amp;#x27;&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:0.996332em;vertical-align:-0.19444em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.801892em;"&gt;&lt;span style="top:-3.113em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mpunct"&gt;&lt;span class="mpunct"&gt;,&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.801892em;"&gt;&lt;span style="top:-3.113em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;'], ["\\[","\\]"] ]
+ }
+ });
+</script>
+
+<h1 id="312-ニューラルネットワーク">3.12 ニューラルネットワーク</h1>
+<p>多くの場合、画像や音声などの非構造化データの分類に利用される。</p>
+<p><strong>入力層</strong>、<strong>隠れ層</strong>、<strong>出力層</strong>で構成される。分類問題に用いる場合、出力層には<strong>予測クラス</strong>の数だけノードがあり、各ノードからの出力値は該当クラスにデータが属する確率を表す。</p>
+<p>例：０から９までの数字が手書きで書かれた画像を識別（分類）する場合出力層は10個のノードがあり、各ノードは、画像がその数字である確率を表す。</p>
+<ul>
+<li><strong>全結合層</strong>: 隠層のニューロンが前後の層すべてのノードとエッジで結合されていること。</li>
+<li><strong>単純パーセプトロン</strong>: 構成要素の最小単位</li>
+<li><strong>多層パーセプトロン</strong>: 単純パーセプトロンをたくさんつなぎあわせたもの</li>
+<li><strong>活性化関数</strong>: 各ニューロンで、入力データ（１つ前の層の数だけある）と出力データ（１つの数値）を対応付ける関数。</li>
+</ul>
+<h2 id="単純パーセプトロン">単純パーセプトロン</h2>
+<ul>
+<li>入力層と出力層の２層のみのシンプルな構造。</li>
+<li>出力層のノードは0か1の二値のみ出力。</li>
+<li><strong>線形分離可能な問題にしか使えない</strong> (活性化関数が線形結合で表現されるため、直線や平面で分離できる問題にしか使えない)</li>
+</ul>
+<h2 id="多層パーセプトロンmlp">多層パーセプトロン(MLP)</h2>
+<ul>
+<li>入力層と出力層の他に、 <strong>中間層（隠れ層）</strong> を持つ、３層以上のパーセプトロン</li>
+<li>活性化関数に非線形関数（シグモイド関数などと思う）を用いることで、複数クラスの分類と線形分離不可能な問題にも対応可能</li>
+</ul>
+<h2 id="ディープニューラルネットワークdnn">ディープニューラルネットワーク(DNN)</h2>
+<p>ディープニューラルネットワークは多層パーセプトロンと構造的には似ているが、隠れ層の数が多いニューラルネットワークを指す。使われる活性化関数もMLPと異なるものが使われることがある。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>MLP</th>
+<th>DNN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定義</td>
+<td>少なくとも１層の隠れそうを持つフィードフォワード型のニューラルネットワーク</td>
+<td>MLPと構造は似ているが、一般的には「深い」層構造を持つニューラルネットワーク</td>
+</tr>
+<tr>
+<td>構造</td>
+<td>全結合層で構成される</td>
+<td>MLPと同じだが、層が深くなることで複雑なパターンをより細かく表現できるようになる</td>
+</tr>
+<tr>
+<td>活性化関数</td>
+<td>非線形活性化関数（ReLUやシグモイドなど）を使って、層間で非線形変換を行う</td>
+<td>より深い層で学習を当ていさせるため、ReLUやLeaky ReLUなどが多く用いられる</td>
+</tr>
+<tr>
+<td>層数</td>
+<td>１〜数層程度</td>
+<td>通常5層以上を持つ</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>比較的単純な分類や回帰タスク。画像認識には限界がある</td>
+<td>画像認識、自然言語処理、音声認識などに用いられている</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ディープラーニング</strong>は、DNNを含む多層構造のニューラルネットワークを用いて複雑なパターンや特徴を学習するための機械学習の一分野。ディープラーニングはDNNだけでなく、<strong>CNN</strong>、<strong>RNN</strong>、<strong>生成モデル</strong>などを含む。</p>
+<p>DNNはディープラーニングの手法の１つ。ディープラーニングは、DNNを含む深層モデルを学習・運用するためのアルゴリズム、技術、応用など全体を指す。例えば、訓練データの前処理、ハイパーパラメータの調整、GPUによる高速化、モデルの評価などの要素もディープラーニングに含まれる。</p>
+<h2 id="重みとバイアス">重みとバイアス</h2>
+<p>ニューロン間の結合の強さを線形結合で表現する。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msub><mi>w</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>w</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>w</mi><mi>N</mi></msub><msub><mi>x</mi><mi>N</mi></msub><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">x = w_1x_1 + w_2x_2 + \cdots + w_Nx_N + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span></p>
+<p>ここで、 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>w</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>w</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><msub><mi>w</mi><mi>N</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(w_1, w_2, \cdots, w_N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> を<strong>重み</strong>、 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> をバイアスという。</p>
+<h2 id="活性化関数">活性化関数</h2>
+<p>重みとバイアスで線形結合された値を、<strong>活性化関数</strong>にわたすことで、出力が決定される。</p>
+<p>活性化関数としては、シグモイドやReLUなどが使われる。
+なお、活性化関数にシグモイドを使うと、ロジスティック回帰と同じ式になる。</p>
+<h2 id="誤差逆伝播と勾配消失問題">誤差逆伝播と勾配消失問題</h2>
+<p>一般的な機械学習の最適化プロセスと同様、ニューラルネットワークでも出力データと正解ラベルの誤差を小さくするようパラメータを最適化していく。つまり、<strong>損失関数を最小化し、最適解に近づけるために、ネットワークの角層の重みやバイアスを繰り返し調整する</strong>のがニューラルネットワークにおける学習になる。</p>
+<p>入ラルネットワークの最適化は、出力層に近い層から更新されていく。これを <strong>誤差逆伝播 (Back Propagation)</strong> と呼ぶ。</p>
+<p><strong>勾配消失問題</strong>とは、この誤差逆伝播を計算する仮定で、<strong>勾配</strong>に関する情報が小さくなっていき、伝播ができなくなり、学習が進まなくなる問題。
+<strong>勾配</strong>とは、<strong>勾配降下法</strong>において、各パラメータに対して損失関数の値がどのように変化するかを示す<strong>微分の値</strong>。勾配の値が大きい場合、パラメータを大きく変化させて損失を減らす方向へ進むことができる。勾配の値が小さいと、パラメータの更新量が小さくなり、学習が遅くなる。層を遡るたびに勾配が小さくなっていくことがある。入力層に近い層では勾配が非常に小さくなり、重みがほとんど変化しなくなるため、学習が進まなくなる。このことを「勾配消失」という。</p>
+<p>活性化関数にReLUやその変種は、勾配がゼロになりにくく、勾配消失を軽減する。その他にもいくつかの対処法がある。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter3_11.html" class="navigation navigation-prev " aria-label="Previous page: 3.11 ナイーブベイズ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chapter3_13.html" class="navigation navigation-next " aria-label="Next page: 3.13 教師なし機械学習">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.12 ニューラルネットワーク","level":"1.18","depth":1,"next":{"title":"3.13 教師なし機械学習","level":"1.19","depth":1,"path":"doc/chapter3_13.md","ref":"./doc/chapter3_13.md","articles":[]},"previous":{"title":"3.11 ナイーブベイズ","level":"1.17","depth":1,"path":"doc/chapter3_11.md","ref":"./doc/chapter3_11.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/chapter3_12.md","mtime":"2024-11-09T07:34:39.842Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T11:18:56.104Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
