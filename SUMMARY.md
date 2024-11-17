@@ -57,3 +57,7 @@
 * [8.9 確率・確率変数・確率分布](./doc/chapter8_9.md)
 * [8.10 代表的な確率分布の紹介](./doc/chapter8_10.md)
 * [8.11 中心極限定理と標本平均の定理](./doc/chapter8_11.md)
+* [8.12 統計的仮説検定](./doc/chapter8_12.md)
+* [9.1 実験計画法](./doc/chapter9_1.md)
+* [9.2 対数の計算](./doc/chapter9_2.md)
+* [9.3 行列](./doc/chapter9_3.md)
