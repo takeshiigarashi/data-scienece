@@ -61,3 +61,5 @@
 * [9.1 実験計画法](./doc/chapter9_1.md)
 * [9.2 対数の計算](./doc/chapter9_2.md)
 * [9.3 行列](./doc/chapter9_3.md)
+* [9.4 微分](./doc/chapter9_4.md)
+* [9.5 積分](./doc/chapter9_5.md)
