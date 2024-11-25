@@ -107,7 +107,7 @@ $$\begin{pmatrix}a & b \\ c & d\end{pmatrix}\begin{pmatrix}x & z \\ y & w\end{pm
 
 $$\begin{pmatrix}1 & 0 \\ 0 & 2\end{pmatrix}, \begin{pmatrix}a & 0 & 0 \\ 0 & b & 0 \\ 0 & 0 & c\end{pmatrix}$$
 
-零行列も対角行列の１つである。
+零行列も対角行列の１つである。対角成分がすべて同じ数の対角行列をスカラー行列と呼ぶ。
 
 行列に対角行列を右からかけると、対角成分に従って列ごとに定数倍され、行列に対角成分を左からかけると、対角成分にしたがって行ごとに定数倍される。
 
@@ -162,6 +162,22 @@ $\bm{A}$ 、 $\bm{B}$ を同じ型の行列、 $k$ を実数とするとき、�
 (2) $\begin{pmatrix}1 & 3 \\ 4 & -5\end{pmatrix}\begin{pmatrix}8 & -14 & -2 \\ 6 & 12 & 10\end{pmatrix} - \begin{pmatrix}2 & 6 \\ 8 & -10\end{pmatrix}\begin{pmatrix}3 & -7 & -1 \\ 3 & 5 & 5\end{pmatrix} = \begin{pmatrix}2 & 6 & 0 \\ 8 & -10 & 0\end{pmatrix}$
 
 通常に計算したときと、分配法則を用いたときの２通りで計算せよ。
+
+## ベクトルの内積と距離
+
+n次元ベクトル $\bm x$ と $\bm y$ に対して、**内積**を次のように定義する。
+
+$$\bm x \cdot \bm y = x_1y_1 + x_2y_2 + \cdots + x_ny_n$$
+
+n次元ベクトル $\bm x$ の**長さ**を次式で定義する。
+
+$$||\bm x|| = \sqrt{\bm x \cdot \bm x} = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2}$$
+
+$\bm x$ と $\bm y$ がどちらもゼロベクトルでないとき、２つのベクトルのなす角を次式のように定める。
+
+$$\cos \theta = \frac{\bm x \cdot \bm y}{||\bm x|| ~ ||\bm y||}$$
+
+ゼロベクトルでない２つのベクトルの内積がゼロのとき、２つのベクトルは**直行する**という。
 
 ## 正則行列と逆行列
 
@@ -313,3 +329,4 @@ $$\begin{aligned}
 すなわち、ある行列を対角化したいときは、その行列の固有値と固有ベクトルを求めることで上記の行列 $\bm{P}$ を得ることができる。
 
 (例題) $\bm{A} = \begin{pmatrix}3 & 2\\1 & 4\end{pmatrix}$ を対角化すると、行列 $\begin{pmatrix}2 & 0 \\0 & 5\end{pmatrix}$ が得られることを確認せよ。
+
