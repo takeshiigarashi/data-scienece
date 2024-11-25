@@ -5,7 +5,7 @@
 * [2.2 データの種類を知る](./doc/chapter2_2.md)
 * [2.3 データの適正を判断する](./doc/chapter2_3.md)
 * [2.4 データの可視化](./doc/chapter2_4.md)
-* [2.4 データの可視化](./doc/chapter2_5.md)
+* [2.5 多次元情報の可視化](./doc/chapter2_5.md)
 * [3.1 データサイエンスにまつわる基本概念](./doc/chapter3_1.md)
 * [3.2 機械学習の各分野の特徴](./doc/chapter3_2.md)
 * [3.3 データ処理と特徴量エンジニアリング](./doc/chapter3_3.md)
